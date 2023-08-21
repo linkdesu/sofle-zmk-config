@@ -1,0 +1,13 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: MaxGust
+      url-base: https://github.com/MaxGust
+  projects:
+    - name: zmk
+      remote: MaxGust
+      revision: sofle
+      import: app/west.yml
+  self:
+    path: config
