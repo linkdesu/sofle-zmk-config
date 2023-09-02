@@ -30,12 +30,12 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        tri_layer {
+        cond_layer_1 {
             if-layers = <1 2>;
             then-layer = <3>;
         };
 
-        tri_layer {
+        cond_layer_2 {
             if-layers = <4 5>;
             then-layer = <6>;
         };
