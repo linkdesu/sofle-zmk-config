@@ -61,11 +61,11 @@
 
         L1 {
             bindings = <
-&none      &none          &none         &none          &none          &none                                            &none          &none          &none   &none   &none         &none
-&kp ESC    &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp BSPC                                         &kp LS(UNDER)  &kp N7         &kp N8  &kp N9  &kp LS(PLUS)  &kp MINUS
-&kp SPACE  &kp GRAVE      &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LALT                                         &kp N0         &kp N4         &kp N5  &kp N6  &kp LS(STAR)  &kp FSLH
-&kp LS(ESC)&kp EQUAL      &kp LS(AMPS)  &kp LS(STAR)   &kp LC(SPACE)  &kp SPACE  &ext_power EP_TOG  &ext_power EP_TOG  &kp DOT        &kp N1         &kp N2  &kp N3  &none         &none
-                          &none         &none          &none          &none      &none              &kp LCTRL          &kp LA(LCTRL)  &kp LS(LCTRL)  &none   &none
+&none        &none          &none         &none          &none          &none                                            &none          &none          &none   &none   &none         &none
+&kp ESC      &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp BSPC                                         &kp LS(UNDER)  &kp N7         &kp N8  &kp N9  &kp LS(PLUS)  &kp MINUS
+&kp LG(SPACE)&kp GRAVE      &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LALT                                         &kp N0         &kp N4         &kp N5  &kp N6  &kp LS(STAR)  &kp FSLH
+&kp LS(ESC)  &kp EQUAL      &kp LS(AMPS)  &kp LS(STAR)   &kp LC(SPACE)  &kp SPACE  &ext_power EP_TOG  &ext_power EP_TOG  &kp DOT        &kp N1         &kp N2  &kp N3  &none         &none
+                            &none         &none          &none          &none      &none              &kp LCTRL          &kp LA(LCTRL)  &kp LS(LCTRL)  &none   &none
             >;
 
             sensor-bindings =
