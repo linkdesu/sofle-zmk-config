@@ -41,16 +41,27 @@
         };
     };
 
+    behaviors {
+        shft_or_alt: shft_or_alt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHFT_OR_ALT";
+            #binding-cells = <0>;
+            bindings =
+                <&sk LSHFT>,
+                <&kp LEFT_ALT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         L0 {
             bindings = <
-&kp ESC         &kp N0  &kp N2  &kp N3  &kp N4  &kp N5                            &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
-&mt LC(LALT) TAB&kp Q   &kp W   &kp E   &kp R   &kp T                             &kp Y   &kp U   &kp I      &kp O    &kp P     &mt LC(LEFT_ALT) BACKSLASH
-&kp LS(LCTRL)   &kp A   &kp S   &kp D   &kp F   &kp G                             &kp H   &kp J   &kp K      &kp L    &kp SEMI  &mt LC(LSHFT) ENTER
-&kp LSHFT       &kp Z   &kp X   &kp C   &kp V   &kp B      &kp LG(L)    &kp C_PP  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                        &sl 9   &mo L8  &mo L4  &kp LCTRL  &lt 1 SPACE  &mo 2     &mo 4   &mo 5   &mo 8      &sl 9
+&kp ESC           &kp N0  &kp N2  &kp N3  &kp N4  &kp N5                            &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
+&mt LC(LALT) TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                             &kp Y   &kp U   &kp I      &kp O    &kp P     &mt LC(LEFT_ALT) BACKSLASH
+&kp LS(LCTRL)     &kp A   &kp S   &kp D   &kp F   &kp G                             &kp H   &kp J   &kp K      &kp L    &kp SEMI  &mt LC(LSHFT) ENTER
+&shft_or_alt      &kp Z   &kp X   &kp C   &kp V   &kp B      &kp LG(L)    &kp C_PP  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                          &sl 9   &mo L8  &mo L4  &kp LCTRL  &lt 1 SPACE  &mo 2     &mo 4   &mo 5   &mo 8      &sl 9
             >;
 
             sensor-bindings =
@@ -60,11 +71,11 @@
 
         L1 {
             bindings = <
-&none        &none          &none         &none          &none          &none                                            &none          &none          &none   &none   &none         &none
-&kp ESC      &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp BSPC                                         &kp LS(UNDER)  &kp N7         &kp N8  &kp N9  &kp LS(PLUS)  &kp MINUS
-&kp LG(SPACE)&kp GRAVE      &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LALT                                         &kp N0         &kp N4         &kp N5  &kp N6  &kp LS(STAR)  &kp FSLH
-&kp LS(ESC)  &kp EQUAL      &kp LS(AMPS)  &kp LS(STAR)   &kp LC(SPACE)  &kp SPACE  &ext_power EP_TOG  &ext_power EP_TOG  &kp DOT        &kp N1         &kp N2  &kp N3  &none         &none
-                            &none         &none          &none          &none      &none              &kp LCTRL          &kp LA(LCTRL)  &kp LS(LCTRL)  &none   &none
+&none          &none          &none         &none          &none          &none                                            &none          &none          &none   &none   &none         &none
+&kp ESC        &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp BSPC                                         &kp LS(UNDER)  &kp N7         &kp N8  &kp N9  &kp LS(PLUS)  &kp MINUS
+&kp LG(SPACE)  &kp GRAVE      &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LALT                                         &kp N0         &kp N4         &kp N5  &kp N6  &kp LS(STAR)  &kp FSLH
+&kp LS(ESC)    &kp EQUAL      &kp LS(AMPS)  &kp LS(STAR)   &kp LC(SPACE)  &kp SPACE  &ext_power EP_TOG  &ext_power EP_TOG  &kp DOT        &kp N1         &kp N2  &kp N3  &none         &none
+                              &none         &none          &none          &none      &none              &kp LCTRL          &kp LA(LCTRL)  &kp LS(LCTRL)  &none   &none
             >;
 
             sensor-bindings =
@@ -74,11 +85,11 @@
 
         L2 {
             bindings = <
-&none  &none    &none    &none    &none          &none                                                &none         &none         &none          &none       &none        &none
-&kp F1 &kp F2   &kp F3   &kp F4   &kp F5         &kp F6                                               &kp LS(RBKT)  &kp LS(RBRC)  &kp LS(PLUS)   &kp EQUAL   &kp LS(DQT)  &kp BSPC
-&kp F7 &kp F8   &kp F9   &kp F10  &kp F11        &kp F12                                              &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)  &kp MINUS   &kp SQT      &kp LC(BSPC)
-&kp F13&kp F14  &kp F15  &kp F16  &kp F17        &kp F18        &ext_power EP_TOG  &ext_power EP_TOG  &kp LBKT      &kp LBRC      &kp LS(LT)     &kp LS(GT)  &none        &kp LC(LA(BSPC))
-                &none    &none    &kp LS(LCTRL)  &kp LA(LCTRL)  &kp LCTRL          &none              &none         &none         &none          &none
+&none    &none    &none    &none    &none          &none                                                &none         &none         &none          &none       &none        &none
+&kp F1   &kp F2   &kp F3   &kp F4   &kp F5         &kp F6                                               &kp LS(RBKT)  &kp LS(RBRC)  &kp LS(PLUS)   &kp EQUAL   &kp LS(DQT)  &kp BSPC
+&kp F7   &kp F8   &kp F9   &kp F10  &kp F11        &kp F12                                              &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)  &kp MINUS   &kp SQT      &kp LC(BSPC)
+&kp F13  &kp F14  &kp F15  &kp F16  &kp F17        &kp F18        &ext_power EP_TOG  &ext_power EP_TOG  &kp LBKT      &kp LBRC      &kp LS(LT)     &kp LS(GT)  &none        &kp LC(LA(BSPC))
+                  &none    &none    &kp LS(LCTRL)  &kp LA(LCTRL)  &kp LCTRL          &none              &none         &none         &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -86,101 +97,101 @@
 
         L3 {
             bindings = <
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-            &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+              &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
             >;
         };
 
         L4 {
             bindings = <
-&none       &none     &none             &none     &none              &none                        &none              &none              &none               &none               &none                  &none
-&kp LC(HOME)&kp HOME  &kp LC(LEFT)      &kp UP    &kp LC(RIGHT)      &kp PG_UP                    &kp LS(LC(LA(Y)))  &kp LS(LC(LA(U)))  &kp LS(LC(LA(I)))   &kp LS(LC(LA(O)))   &kp LS(LC(LA(P)))      &kp LS(LC(LA(PIPE)))
-&kp LC(END) &kp END   &kp LEFT          &kp DOWN  &kp RIGHT          &kp PG_DN                    &kp LS(LC(LA(H)))  &kp LS(LC(LA(J)))  &kp LS(LC(LA(K)))   &kp LS(LC(LA(L)))   &kp LS(LC(LA(COLON)))  &none
-&none       &none     &kp LC(LA(LEFT))  &none     &kp LC(LA(RIGHT))  &none      &none      &none  &kp LS(LC(LA(N)))  &kp LS(LC(LA(M)))  &kp LS(LC(LA(LT)))  &kp LS(LC(LA(GT)))  &kp LS(LC(LA(QMARK)))  &none
-                      &none             &none     &kp LS(LCTRL)      &kp LALT   &kp LSHFT  &none  &none              &none              &none               &none
+&none         &none     &none             &none     &none              &none                        &none              &none              &none               &none               &none                  &none
+&kp LC(HOME)  &kp HOME  &kp LC(LEFT)      &kp UP    &kp LC(RIGHT)      &kp PG_UP                    &kp LS(LC(LA(Y)))  &kp LS(LC(LA(U)))  &kp LS(LC(LA(I)))   &kp LS(LC(LA(O)))   &kp LS(LC(LA(P)))      &kp LS(LC(LA(PIPE)))
+&kp LC(END)   &kp END   &kp LEFT          &kp DOWN  &kp RIGHT          &kp PG_DN                    &kp LS(LC(LA(H)))  &kp LS(LC(LA(J)))  &kp LS(LC(LA(K)))   &kp LS(LC(LA(L)))   &kp LS(LC(LA(COLON)))  &none
+&none         &none     &kp LC(LA(LEFT))  &none     &kp LC(LA(RIGHT))  &none      &none      &none  &kp LS(LC(LA(N)))  &kp LS(LC(LA(M)))  &kp LS(LC(LA(LT)))  &kp LS(LC(LA(GT)))  &kp LS(LC(LA(QMARK)))  &none
+                        &none             &none     &kp LS(LCTRL)      &kp LALT   &kp LSHFT  &none  &none              &none              &none               &none
             >;
         };
 
         L5 {
             bindings = <
-&none          &none  &none  &none  &none          &none                                        &none          &none          &none      &none    &none     &none
-&kp DEL        &kp Q  &kp W  &kp E  &kp R          &kp T                                        &kp Y          &kp U          &kp I      &kp O    &kp P     &kp BSPC
-&kp LC(DEL)    &kp A  &kp S  &kp D  &kp F          &kp G                                        &kp H          &kp J          &kp K      &kp L    &kp SEMI  &kp LC(BSPC)
-&kp LC(LA(DEL))&kp Z  &kp X  &kp C  &kp V          &kp B          &none          &none          &kp N          &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LC(LA(BSPC))
-                      &none  &none  &kp LS(LCTRL)  &kp LA(LCTRL)  &kp LA(LSHFT)  &kp LA(LSHFT)  &kp LA(LCTRL)  &kp LS(LCTRL)  &none      &none
+&none            &none  &none  &none  &none          &none                                        &none          &none          &none      &none    &none     &none
+&kp DEL          &kp Q  &kp W  &kp E  &kp R          &kp T                                        &kp Y          &kp U          &kp I      &kp O    &kp P     &kp BSPC
+&kp LC(DEL)      &kp A  &kp S  &kp D  &kp F          &kp G                                        &kp H          &kp J          &kp K      &kp L    &kp SEMI  &kp LC(BSPC)
+&kp LC(LA(DEL))  &kp Z  &kp X  &kp C  &kp V          &kp B          &none          &none          &kp N          &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LC(LA(BSPC))
+                        &none  &none  &kp LS(LCTRL)  &kp LA(LCTRL)  &kp LA(LSHFT)  &kp LA(LSHFT)  &kp LA(LCTRL)  &kp LS(LCTRL)  &none      &none
             >;
         };
 
         L6 {
             bindings = <
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-            &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+              &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
             >;
         };
 
         L7 {
             bindings = <
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-            &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+              &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
             >;
         };
 
         L8 {
             bindings = <
-&kp ESC    &none            &none               &kp LG(LC(T))  &none          &none                                    &none  &none  &none  &none  &none  &none
-&kp LG(TAB)&kp LC(LA(TAB))  &none               &kp LG(UP)     &none          &kp LG(PG_UP)                            &none  &none  &none  &none  &none  &none
-&kp LCMD   &none            &kp LG(LEFT_ARROW)  &kp LG(DOWN)   &kp LG(RIGHT)  &kp LG(PG_DN)                            &none  &none  &none  &none  &none  &none
-&none      &none            &none               &kp LG(D)      &kp LG(DOT)    &kp LC(LA(DEL))  &sys_reset  &sys_reset  &none  &none  &none  &none  &none  &none
-                            &none               &none          &none          &none            &none       &none       &none  &none  &none  &none
+&kp ESC      &none            &none               &kp LG(LC(T))  &none          &none                                    &none  &none  &none  &none  &none  &none
+&kp LG(TAB)  &kp LC(LA(TAB))  &none               &kp LG(UP)     &none          &kp LG(PG_UP)                            &none  &none  &none  &none  &none  &none
+&kp LCMD     &none            &kp LG(LEFT_ARROW)  &kp LG(DOWN)   &kp LG(RIGHT)  &kp LG(PG_DN)                            &none  &none  &none  &none  &none  &none
+&none        &none            &none               &kp LG(D)      &kp LG(DOT)    &kp LC(LA(DEL))  &sys_reset  &sys_reset  &none  &none  &none  &none  &none  &none
+                              &none               &none          &none          &none            &none       &none       &none  &none  &none  &none
             >;
         };
 
         L9 {
             bindings = <
-&kp ESC            &none                &none                &none                &none                &none                                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none         &bt BT_CLR
-&kp LS(LA(LC(F1))) &kp LS(LA(LC(F2)))   &kp LS(LA(LC(F3)))   &kp LS(LA(LC(F4)))   &kp LS(LA(LC(F5)))   &kp LS(LA(LC(F6)))                             &none         &none         &none         &none  &out OUT_USB  &out OUT_BLE
-&kp LS(LA(LC(F7))) &kp LS(LA(LC(F8)))   &kp LS(LA(LC(F9)))   &kp LS(LA(LC(F10)))  &kp LS(LA(LC(F11)))  &kp LS(LA(LC(F12)))                            &none         &none         &none         &none  &none         &none
-&kp LS(LA(LC(F13)))&kp LS(LA(LC(F14)))  &kp LS(LA(LC(F15)))  &kp LS(LA(LC(F16)))  &kp LS(LA(LC(F17)))  &kp LS(LA(LC(F18)))  &bootloader  &bootloader  &none         &none         &none         &none  &none         &none
-                                        &none                &none                &none                &none                &none        &none        &none         &none         &none         &none
+&kp ESC              &none                &none                &none                &none                &none                                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none         &bt BT_CLR
+&kp LS(LA(LC(F1)))   &kp LS(LA(LC(F2)))   &kp LS(LA(LC(F3)))   &kp LS(LA(LC(F4)))   &kp LS(LA(LC(F5)))   &kp LS(LA(LC(F6)))                             &none         &none         &none         &none  &out OUT_USB  &out OUT_BLE
+&kp LS(LA(LC(F7)))   &kp LS(LA(LC(F8)))   &kp LS(LA(LC(F9)))   &kp LS(LA(LC(F10)))  &kp LS(LA(LC(F11)))  &kp LS(LA(LC(F12)))                            &none         &none         &none         &none  &none         &none
+&kp LS(LA(LC(F13)))  &kp LS(LA(LC(F14)))  &kp LS(LA(LC(F15)))  &kp LS(LA(LC(F16)))  &kp LS(LA(LC(F17)))  &kp LS(LA(LC(F18)))  &bootloader  &bootloader  &none         &none         &none         &none  &none         &none
+                                          &none                &none                &none                &none                &none        &none        &none         &none         &none         &none
             >;
         };
 
         L10 {
             bindings = <
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-            &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+              &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
             >;
         };
 
         L11 {
             bindings = <
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-            &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+              &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
             >;
         };
 
         L12 {
             bindings = <
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-            &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+              &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
             >;
         };
     };
