@@ -147,11 +147,11 @@
 
         L8 {
             bindings = <
-&kp ESC      &none            &none               &kp LG(LC(T))  &none          &none                                    &none  &none  &none  &none  &none  &none
-&kp LG(TAB)  &kp LC(LA(TAB))  &none               &kp LG(UP)     &none          &kp LG(PG_UP)                            &none  &none  &none  &none  &none  &none
-&kp LCMD     &none            &kp LG(LEFT_ARROW)  &kp LG(DOWN)   &kp LG(RIGHT)  &kp LG(PG_DN)                            &none  &none  &none  &none  &none  &none
-&none        &none            &none               &kp LG(D)      &kp LG(DOT)    &kp LC(LA(DEL))  &sys_reset  &sys_reset  &none  &none  &none  &none  &none  &none
-                              &none               &none          &none          &none            &none       &none       &none  &none  &none  &none
+&kp ESC      &none            &none               &kp LG(LC(T))  &none          &none                          &none  &none  &none  &none  &none  &none
+&kp LG(TAB)  &kp LC(LA(TAB))  &none               &kp LG(UP)     &none          &kp LG(PG_UP)                  &none  &none  &none  &none  &none  &none
+&kp LCMD     &none            &kp LG(LEFT_ARROW)  &kp LG(DOWN)   &kp LG(RIGHT)  &kp LG(PG_DN)                  &none  &none  &none  &none  &none  &none
+&none        &none            &none               &kp LG(D)      &kp LG(DOT)    &kp LC(LA(DEL))  &none  &none  &none  &none  &none  &none  &none  &none
+                              &none               &none          &none          &none            &none  &none  &none  &none  &none  &none
             >;
         };
 
