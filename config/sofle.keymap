@@ -42,14 +42,6 @@
     };
 
     behaviors {
-        shft_or_alt: shft_or_alt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SHFT_OR_ALT";
-            #binding-cells = <0>;
-            bindings =
-                <&sk LSHFT>,
-                <&kp LEFT_ALT>;
-        };
     };
 
     keymap {
@@ -60,7 +52,7 @@
 &kp ESC           &kp N0  &kp N2  &kp N3  &kp N4  &kp N5                            &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
 &mt LC(LALT) TAB  &kp Q   &kp W   &kp E   &kp R   &kp T                             &kp Y   &kp U   &kp I      &kp O    &kp P     &mt LC(LEFT_ALT) BACKSLASH
 &kp LS(LCTRL)     &kp A   &kp S   &kp D   &kp F   &kp G                             &kp H   &kp J   &kp K      &kp L    &kp SEMI  &mt LC(LSHFT) ENTER
-&shft_or_alt      &kp Z   &kp X   &kp C   &kp V   &kp B      &kp LG(L)    &kp C_PP  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&kp LSHFT         &kp Z   &kp X   &kp C   &kp V   &kp B      &kp LG(L)    &kp C_PP  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                           &sl 9   &mo L8  &mo L4  &kp LCTRL  &lt 1 SPACE  &mo 2     &mo 4   &mo 5   &mo 8      &sl 9
             >;
 
