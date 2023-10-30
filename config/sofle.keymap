@@ -69,8 +69,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp C_PREV C_NEXT>;
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_NEXT C_PREV>;
         };
 
         L1 {
@@ -81,10 +81,6 @@
 &kp LS(ESC)    &none          &kp LS(AMPS)  &kp LS(STAR)   &kp LC(SPACE)  &none     &none  &none      &kp DOT        &kp N1            &kp N2              &kp N3  &none         &none
                               &none         &none          &none          &none     &none  &kp LCTRL  &mo 2          &kp LC(LEFT_ALT)  &kp LC(LEFT_SHIFT)  &none
             >;
-
-            sensor-bindings =
-                <&inc_dec_kp LC(LA(LS(DOWN))) LS(LA(LC(UP)))>,
-                <&inc_dec_kp LS(LA(LC(LEFT))) LS(LA(LC(RIGHT)))>;
         };
 
         L2 {
@@ -95,10 +91,6 @@
 &kp F13  &kp F14  &kp F15  &kp F16             &kp F17           &kp F18  &none      &none  &kp LBKT      &kp RBKT                &kp LS(LT)     &kp LS(GT)  &kp LG(PERIOD)  &kp LC(LA(BSPC))
                   &none    &kp LC(LEFT_SHIFT)  &kp LC(LEFT_ALT)  &mo 1    &kp LCTRL  &none  &none         &kp LC(LA(LEFT_SHIFT))  &none          &none
             >;
-
-            sensor-bindings =
-                <&inc_dec_kp LS(LC(LA(DOWN))) LS(LA(LC(UP)))>,
-                <&inc_dec_kp LS(LA(LC(LEFT))) LS(LA(LC(RIGHT)))>;
         };
 
         L3 {
