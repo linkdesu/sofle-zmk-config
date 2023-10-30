@@ -55,11 +55,11 @@
 
         L0 {
             bindings = <
-&kp ESC                 &kp NUMBER_1  &kp N2  &kp N3  &kp N4  &kp N5                          &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
-&mt LC(LALT) TAB        &kp Q         &kp W   &kp E   &kp R   &kp T                           &kp Y   &kp U   &kp I      &kp O    &kp P     &mt LC(LEFT_ALT) BACKSLASH
-&mt LC(LEFT_SHIFT) ESC  &kp A         &kp S   &kp D   &kp F   &kp G                           &kp H   &kp J   &kp K      &kp L    &kp SEMI  &mt LC(LSHFT) ENTER
-&shft_or_alt            &kp Z         &kp X   &kp C   &kp V   &kp B      &kp LG(L)  &kp C_PP  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &shft_or_alt
-                                      &sl 9   &none   &mo 8   &kp LCTRL  &mo 1      &mo 2     &mo 4   &mo 5   &none      &to 10
+&kp ESC                 &kp NUMBER_1  &kp N2  &kp N3  &kp N4  &kp N5                          &kp N6  &kp N7                  &kp N8     &kp N9   &kp N0    &kp BSPC
+&mt LC(LALT) TAB        &kp Q         &kp W   &kp E   &kp R   &kp T                           &kp Y   &kp U                   &kp I      &kp O    &kp P     &mt LC(LEFT_ALT) BACKSLASH
+&mt LC(LEFT_SHIFT) ESC  &kp A         &kp S   &kp D   &kp F   &kp G                           &kp H   &kp J                   &kp K      &kp L    &kp SEMI  &mt LC(LSHFT) ENTER
+&shft_or_alt            &kp Z         &kp X   &kp C   &kp V   &kp B      &kp LG(L)  &kp C_PP  &kp N   &kp M                   &kp COMMA  &kp DOT  &kp FSLH  &shft_or_alt
+                                      &sl 9   &none   &mo 8   &kp LCTRL  &mo 1      &mo 2     &mo 4   &kp LC(LA(LEFT_SHIFT))  &none      &to 10
             >;
 
             sensor-bindings =
@@ -69,11 +69,11 @@
 
         L1 {
             bindings = <
-&none          &none          &none         &none          &none          &none                                     &none          &none          &none   &none   &none         &none
-&kp ESC        &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp BSPC                                  &kp LS(UNDER)  &kp N7         &kp N8  &kp N9  &kp LS(PLUS)  &kp MINUS
-&kp LG(SPACE)  &kp GRAVE      &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp DEL                                   &kp N0         &kp N4         &kp N5  &kp N6  &kp LS(STAR)  &kp FSLH
-&kp LS(ESC)    &none          &kp LS(AMPS)  &kp LS(STAR)   &kp LC(SPACE)  &kp SPACE               &none  &none      &kp DOT        &kp N1         &kp N2  &kp N3  &none         &none
-                              &none         &none          &none          &kp LC(LA(LEFT_SHIFT))  &none  &kp LCTRL  &kp LA(LCTRL)  &kp LS(LCTRL)  &none   &none
+&none          &none          &none         &none          &none          &none                                 &none          &none             &none               &none   &none         &none
+&kp ESC        &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp BSPC                              &kp LS(UNDER)  &kp N7            &kp N8              &kp N9  &kp LS(PLUS)  &kp MINUS
+&kp LG(SPACE)  &kp GRAVE      &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp DEL                               &kp N0         &kp N4            &kp N5              &kp N6  &kp LS(STAR)  &kp FSLH
+&kp LS(ESC)    &none          &kp LS(AMPS)  &kp LS(STAR)   &kp LC(SPACE)  &kp SPACE               &none  &none  &kp DOT        &kp N1            &kp N2              &kp N3  &none         &none
+                              &none         &none          &none          &kp LC(LA(LEFT_SHIFT))  &none  &mo 2  &kp LCTRL      &kp LC(LEFT_ALT)  &kp LC(LEFT_SHIFT)  &none
             >;
 
             sensor-bindings =
@@ -83,11 +83,11 @@
 
         L2 {
             bindings = <
-&none    &none    &none    &none    &none          &none                            &none                 &none         &none          &none       &none           &none
-&kp F1   &kp F2   &kp F3   &kp F4   &kp F5         &kp F6                           &kp LS(LBRC)          &kp LS(RBRC)  &kp LS(PLUS)   &kp EQUAL   &kp LS(DQT)     &kp BSPC
-&kp F7   &kp F8   &kp F9   &kp F10  &kp F11        &kp F12                          &kp LS(LPAR)          &kp LS(RPAR)  &kp LS(UNDER)  &kp MINUS   &kp SQT         &kp LC(BSPC)
-&kp F13  &kp F14  &kp F15  &kp F16  &kp F17        &kp F18        &none      &none  &kp LBKT              &kp RBKT      &kp LS(LT)     &kp LS(GT)  &kp LG(PERIOD)  &kp LC(LA(BSPC))
-                  &none    &none    &kp LS(LCTRL)  &kp LA(LCTRL)  &kp LCTRL  &none  &kp LC(LS(LEFT_ALT))  &none         &none          &none
+&none    &none    &none    &none               &none             &none                    &none                 &none         &none          &none       &none           &none
+&kp F1   &kp F2   &kp F3   &kp F4              &kp F5            &kp F6                   &kp LS(LBRC)          &kp LS(RBRC)  &kp LS(PLUS)   &kp EQUAL   &kp LS(DQT)     &kp BSPC
+&kp F7   &kp F8   &kp F9   &kp F10             &kp F11           &kp F12                  &kp LS(LPAR)          &kp LS(RPAR)  &kp LS(UNDER)  &kp MINUS   &kp SQT         &kp LC(BSPC)
+&kp F13  &kp F14  &kp F15  &kp F16             &kp F17           &kp F18    &none  &none  &kp LBKT              &kp RBKT      &kp LS(LT)     &kp LS(GT)  &kp LG(PERIOD)  &kp LC(LA(BSPC))
+                  &none    &kp LC(LEFT_SHIFT)  &kp LC(LEFT_ALT)  &kp LCTRL  &mo 1  &none  &kp LC(LS(LEFT_ALT))  &none         &none          &none
             >;
 
             sensor-bindings =
